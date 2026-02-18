@@ -105,14 +105,18 @@ function DashboardContent({ children }: { children: React.ReactNode }) {
             <div className="flex-1 flex flex-col min-w-0">
                 <nav className="bg-white border-b border-gray-200 h-16 flex items-center justify-between px-6 shrink-0">
                     <p className="text-xs text-blue-600 font-medium">
-                        <p className="text-sm font-medium text-gray-900">{username}</p>
-                        <div className="flex items-center justify-end space-x-1">
-                            <RoleIcon className="w-3 h-3 text-gray-400" />
-                            <p className="text-xs text-gray-500">{roleLabels[userRole]}</p>
-                        </div>
+
                     </p>
 
                     <div className="flex items-center space-x-4">
+                        <div className="text-right hidden sm:block">
+                            <p className="text-sm font-medium text-gray-900">{username}</p>
+                            <div className="flex items-center justify-end space-x-1">
+                                <RoleIcon className="w-3 h-3 text-gray-400" />
+                                <p className="text-xs text-gray-500">{roleLabels[userRole]}</p>
+                            </div>
+                        </div>
+
                         <button
                             onClick={handleLogout}
                             className="flex items-center space-x-2 px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md transition border border-red-200"
